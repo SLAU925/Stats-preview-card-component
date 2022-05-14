@@ -1,0 +1,162 @@
+/* GENERAL
+------------------------------------------- */
+* {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    color: hsl(0, 0%, 100%);
+}
+body {
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 55px 100px;
+    max-width: 900px;
+}
+.line_break {
+    display: block;
+}
+/* TEXT & PARAGRAPH
+------------------------------------------- */
+.text {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0 80px 0 80px;    
+}
+h2 {
+    margin-top: 0;
+    position: relative;
+    top: 10px;
+}
+h2,.bigger {
+    font-size: 25px;
+}
+.highlight {
+    font-size: 25px;
+    color: hsl(277, 64%, 61%);
+}
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 0;
+    position: relative;
+    top: 15px;
+}
+.container {
+    margin-top: 50px;
+}
+.stats {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.stats_value {
+    font-weight: 700;
+}
+.stats_title{
+    color: hsla(0, 0%, 100%, 0.75);
+    display: flex;
+    flex-direction: row nowrap;
+}
+.smaller {
+    font-size: 11px;
+}
+.flex-item {
+    flex: 0 0 100px;
+    margin: 5px 20px 0 0;
+}
+
+/* IMAGE
+------------------------------------------- */
+img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: auto;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.image {
+    position: relative;
+    z-index: 1;
+}
+.overlay {
+    position: absolute;
+    background-color: rgba(96, 25, 141, 0.8);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+/* MOBILE DESIGN 
+------------------------------------------- */
+@media all and (max-width: 916px) {
+    main {
+        flex-direction: column-reverse;
+        max-width: 300px;
+    }
+    img {
+        height: auto;
+        width: 300px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .overlay {
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .text {
+        display: flex;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 300px;
+    }
+    p , h2 {
+        padding: 0 30px;
+        position: relative;
+        align-items: center;
+    }
+    h2 {
+        margin-top: 30px;
+    }
+    .container {
+        position: relative;
+    }
+    .stats {
+        max-width: 300px;
+        flex-direction: column;
+    }
+    .stats_title {
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        left: -13px;
+        text-align: center;
+        margin-right: 20px;
+    }
+    .flex-item {
+        margin: 0;
+        flex: 1 1 70px;
+        justify-content: center;
+    }
+}
